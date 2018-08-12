@@ -1,6 +1,7 @@
-﻿$sln = Get-SPsolution -identity AwesomeCalculator.wsp
+﻿$webApp = "http://spfarmciro-sp:2013/"
+$sln = Get-SPsolution -identity AwesomeCalculator.wsp
 
-Uninstall-SPsolution -identity AwesomeCalculator.wsp -confirm:$false
+Uninstall-SPsolution -identity AwesomeCalculator.wsp -WebApplication $webApp -confirm:$false
 
 Write-Host "Starting solution uninstall operation..." 
 

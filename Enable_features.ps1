@@ -8,6 +8,11 @@ Start-Sleep -s 5
 Write-Host "Enabling AwesomeCalculator.ContentTypes"
 Enable-SPFeature -Identity e7062e8b-79a2-428f-af56-5e53aaf875a7 -Url $site
 
+Start-Sleep -s 3
+
+Write-Host "Enabling AwesomeCalculator.WebParts"
+Enable-SPFeature -Identity bcc35913-627d-49c6-ab95-9e74591c573d -Url $site
+
 #Start-Sleep -s 5
 
 #Write-Host "Enabling AwesomeCalculator.ListInstances"
