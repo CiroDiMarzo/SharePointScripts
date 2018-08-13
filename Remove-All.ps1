@@ -1,24 +1,9 @@
-﻿$webApp = "http://spfarmciro-sp:2013/"
-$site = "http://spfarmciro-sp:2013/sites/awesomecalc"
-$sln = Get-SPsolution -identity AwesomeCalculator.wsp
+﻿./Disable_features.ps1
 
-Uninstall-SPsolution -identity AwesomeCalculator.wsp -WebApplication $webApp -confirm:$false
+Start-Sleep -s 2
 
-Write-Host "Starting solution uninstall operation..." 
+./Uninstall-remove.ps1
 
-while($sln.JobExists) {
-    echo "> Uninstall in progress..."
-    start-sleep -s 3
-}
+Start-Sleep -s 2
 
-Write-Host "Done. Starting remove process"
-
-Remove-SPsolution -identity AwesomeCalculator.wsp -confirm:$false
-
-Write-Host "Done"
-
-Write-Host "Deleting site at $site"
-
-Remove-SPSite -Identity $site -confirm:$false
-
-Write-Host "Site deleted."
+./Remove-Site.ps1
