@@ -1,4 +1,4 @@
-﻿$site = "http://spfarmciro-sp:2013/sites/awesomecalc"
+﻿. .\Variables.ps1
 
 Write-Host "Deleting site at $site"
 

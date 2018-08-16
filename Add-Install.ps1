@@ -1,5 +1,4 @@
-﻿$webApp = "http://spfarmciro-sp:2013/"
-$literalPath = "C:\Users\ciro\Documents\Solutions\063\AwesomeCalculator.wsp"
+﻿. .\Variables.ps1
 
 Write-Host "Adding the solution $literalPath"
 

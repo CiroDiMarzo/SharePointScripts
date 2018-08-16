@@ -1,4 +1,4 @@
-﻿$site = "http://spfarmciro-sp:2013/sites/awesomecalc"
+﻿. .\Variables.ps1
 
 Write-Host "Enabling feature AwesomeCalculator.Fields"
 Enable-SPFeature -Identity 811f7511-2a33-43f4-a2c6-bbbaa7bf9c66 -Url $site

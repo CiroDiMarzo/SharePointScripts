@@ -1,5 +1,4 @@
-﻿
-$literalPath = "C:\Users\ciro\Documents\Solutions\061\AwesomeCalculator.wsp"
+﻿. .\Variables.ps1
 
 Write-Host "Updating the solution $literalPath"
 

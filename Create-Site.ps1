@@ -1,5 +1,4 @@
-﻿$site = "http://spfarmciro-sp:2013/sites/awesomecalc"
-$owner = "SPFarmCiro-SP\Ciro"
+﻿. .\Variables.ps1
 
 Write-Host "Creating site at $site"
 

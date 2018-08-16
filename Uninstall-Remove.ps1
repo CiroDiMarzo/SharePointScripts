@@ -1,4 +1,5 @@
-﻿$webApp = "http://spfarmciro-sp:2013/"
+﻿. .\Variables.ps1
+
 $sln = Get-SPsolution -identity AwesomeCalculator.wsp
 
 Uninstall-SPsolution -identity AwesomeCalculator.wsp -WebApplication $webApp -confirm:$false
