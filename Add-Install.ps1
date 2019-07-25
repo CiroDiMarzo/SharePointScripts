@@ -9,7 +9,7 @@ Write-Host -ForegroundColor Green "Solution added, starting installation..."
 Install-SPSolution -Identity $solutionName -GACDeployment -WebApplication $webApp  -Force
 
 while($sln.JobExists) {
-    -ForegroundColor Gray "> Installation in progress..."
+    Write-Host -ForegroundColor Gray "> Installation in progress..."
     start-sleep -s 3
 }
 
