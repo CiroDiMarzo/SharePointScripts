@@ -1,18 +1,18 @@
 ﻿. .\Variables.ps1
 
-$sln = Get-SPsolution -identity AwesomeCalculator.wsp
+$sln = Get-SPsolution -identity $solutionName.wsp
 
-Uninstall-SPsolution -identity AwesomeCalculator.wsp -WebApplication $webApp -confirm:$false
+Uninstall-SPsolution -identity $solutionName.wsp -WebApplication $webApp -confirm:$false
 
 Write-Host "Starting solution uninstall operation..." 
 
 while($sln.JobExists) {
-    echo "> Uninstall in progress..."
+    Write-Host -ForegroundColor Gray "> Uninstall in progress..."
     start-sleep -s 3
 }
 
-Write-Host "Done. Starting remove process"
+Write-Host -ForegroundColor Gray "Done. Starting remove process"
 
-Remove-SPsolution -identity AwesomeCalculator.wsp -confirm:$false
+Remove-SPsolution -identity $solutionName.wsp -confirm:$false
 
 Write-Host "Done"

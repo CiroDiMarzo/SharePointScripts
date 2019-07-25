@@ -2,6 +2,8 @@
 
 $site = "http://spfarmciro-sp:2013/sites/awesomecalc"
 
-$literalPath = "C:\Users\ciro\Documents\Solutions\066\AwesomeCalculator.wsp"
+$solutionName = "AwesomeCalculator.wsp"
+
+$literalPath = "C:\Users\ciro\Documents\Solutions\066\$solutionName"
 
 $owner = "SPFarmCiro-SP\Ciro"
